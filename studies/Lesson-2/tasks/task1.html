@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleTask1.css">
+</head>
+<body>
+    <h1>Задача 1</h1>
+
+    <p>
+        Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+    </p>
+
+    <div class="container__table direction-column">
+        <div class="table__block">
+            <div class="table__head">
+                <div class="head__item correction-cell-right">Шуканий результат</div>
+                <div class="head__item">Отримане значення</div>
+            </div>
+        </div>
+        <div class="table__block">
+            <div class="table__body">
+                <div class="body__item correction-cell-top correction-cell-right">Сума:</div>
+                <div class="body__item correction-cell-top"><span id="sumNumber"></span></div>
+            </div>
+        </div>
+        <div class="table__block">
+            <div class="table__body">
+                <div class="body__item correction-cell-top correction-cell-right">Різниця::</div>
+                <div class="body__item correction-cell-top"><span id="differenceNumber"></span></div>
+            </div>
+        </div>
+    </div>
+
+        <button onclick="window.history.back()">Назад</button>
+
+        <script>
+            // 1. Вводимо необхідні дані
+            let firstNumber = parseFloat(prompt('Введіть перше число'));
+            let secondNumber = parseFloat(prompt('Введіть друге число'));
+
+            //2. Знаходимо результат
+            let sumNumber = firstNumber + secondNumber;
+            let differenceNumber = firstNumber - secondNumber;
+
+            //3. Виведення результату
+            let showSumNumber = document.getElementById('sumNumber');
+            showSumNumber.innerHTML = sumNumber;
+            let showDifferenceNumber = document.getElementById('differenceNumber');
+            showDifferenceNumber.innerHTML = differenceNumber;
+        </script>
+
+</body>
+</html>

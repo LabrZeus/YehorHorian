@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Задача 4</h1>
+
+    <p>
+        Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+    </p>
+
+    <button onclick="window.history.back()">Назад</button>
+
+        <script>
+        // 1. Вводимо необхідні дані
+        let centimeters = parseInt(prompt('Введіть значення у сантиметрах', '0'));
+
+        //2. Знаходимо результат
+        let kilometers = Math.floor(centimeters / 100000)
+        let meters = (centimeters % 100000) / 100
+
+        //3. Виведення результату
+        alert(`${centimeters} сантиметрів це ${kilometers} кілометрів та ${meters} метрів`);
+
+    </script>
+
+</body>
+</html>
